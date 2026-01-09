@@ -8,7 +8,8 @@ This project focuses on cleaning, deduplicating, and modeling supermarket produc
 
 Different supermarkets often use inconsistent product names, categories, and identifiers, making price comparison difficult for everyday users. This project solves that problem by standardizing raw data and modeling it into a Neo4j knowledge graph that links equivalent products across stores.
 
-Objective
+
+Objective:
 
 To enable a single-search experience where users can:
 
@@ -38,6 +39,7 @@ Consolidated multiple raw files into a single CSV dataset
 
 This process significantly reduced noise and prepared the data for graph modeling.
 
+
 Knowledge Graph Design (Neo4j)
 
 The cleaned data was modeled into a knowledge graph using Neo4j with the following nodes:
@@ -54,6 +56,7 @@ Listing
 
 Store
 
+
 Relationship Design Principle
 
 Relationships were designed to flow from less stable entities to more stable entities to prevent duplication and ensure consistency:
@@ -68,6 +71,7 @@ Listing → Store
 
 This structure allows multiple store listings to reference the same core product entity while maintaining store-specific pricing and metadata.
 
+
 Key Outcomes
 
 Reduced raw data size by over 96% through deduplication
@@ -81,6 +85,7 @@ Price comparison across stores
 Brand-based and category-based searches
 
 Store-specific listings
+
 
 Tools & Technologies
 
